@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Queries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Literals.fs" />
+    <Compile Include="Models.fs" />
+    <Content Include="db\connStrAtollSimulation.txt" />
+    <Content Include="db\connStrAchko.txt" />
+    <Content Include="db\connStrATOLL_5GMRAT.txt" />
+    <Compile Include="Db\Db.fs" />
+    <Compile Include="Services\FileService.fs" />
+    <Compile Include="Services\Tools.fs" />
+    <Compile Include="Services\IsEtlPossible.fs" />
+    <Compile Include="Services\DbInsertService.fs" />
+    <Compile Include="Services\DbDeleteService.fs" />
+    <Compile Include="Services\Mail.fs" />
+    <Compile Include="Services\Filters.fs" />
+    <Compile Include="Etl\Etl.fs" />
+    <Compile Include="Etl\TechForAdd\Umts.fs" />
+    <Compile Include="Etl\TechForAdd\LteDssNr.fs" />
+    <Compile Include="Etl\TechForAdd\Gsm.fs" />
+    <Compile Include="Etl\EtlAddTech.fs" />
+    <Compile Include="Etl\EtlUpdates.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.FSharp" Version="4.7.0" />
+    <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.2.0" />
+    <PackageReference Include="FSharp.Data" Version="6.3.0" />
+    <PackageReference Include="FSharp.Data.LiteralProviders" Version="1.0.3" />
+    <PackageReference Include="FSharp.Data.SqlClient" Version="2.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="SQLProvider" Version="1.3.11" />
+    <PackageReference Include="Z.Dapper.Plus" Version="6.0.4" />
+  </ItemGroup>
+
+</Project>

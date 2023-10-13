@@ -1,0 +1,1 @@
+Server=10.26.43.122;Database=ACHKO;User ID=atolladmin;Password=atolladmin123;Trusted_Connection=False;Encrypt=False
